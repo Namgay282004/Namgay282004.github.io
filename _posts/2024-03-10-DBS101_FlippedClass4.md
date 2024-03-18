@@ -12,8 +12,10 @@ Greeting everyone! Before we dive into todays disscussion let's recollect on The
 #### Demo
 SQL query given below ranks employees based on their scores, with the highest score receiving a rank of 1.
 
-` SELECT name, score, RANK() OVER (ORDER BY score DESC) as rank
-FROM scores; `
+```
+ SELECT name, score, RANK() OVER (ORDER BY score DESC) as rank
+FROM scores; 
+```
 ![alt text](<../Screenshot from 2024-03-17 20-11-58.png>)
 *If two or more rows have the same values, they will receive the same rank, and the next rank will be skipped. For example, if  Wangchuk and Yonten, both have a score of 96 and are tied for the first place, the next individual, Ranjung, will be ranked third, not second.*
 
@@ -22,8 +24,10 @@ FROM scores; `
 #### Demo
 Query given below display's each employee's name, their individual score, and the average score of their department. This is useful for understanding how each employee's score compares to the average score of their department.
 
-`SELECT name, score, AVG(score) OVER (PARTITION BY department) as avg_score
-FROM employees;`
+```
+SELECT name, score, AVG(score) OVER (PARTITION BY department) as avg_score
+FROM employees;
+```
 ![alt text](<../Screenshot from 2024-03-17 18-33-58.png>)
 
 3.**Pivoting**: Pivoting is a technique used in SQL to transform data from a row-oriented format into a column-oriented. This is particularly useful when we want to summarize data in a way that's easier to read or analyze.
@@ -31,12 +35,15 @@ FROM employees;`
 ##### Demo
 Let's pivot the employees table example to show the total number of employees in each department. We want to transform the data so that each department becomes a column, and the values in these columns represent the total number of employees in each department.
 
-    `SELECT SUM(CASE WHEN department = 'HR' THEN 1 ELSE 0 END) as HR,
-       SUM(CASE WHEN department = 'IT' THEN 1 ELSE 0 END) as IT,
-       SUM(CASE WHEN department = 'Finance' THEN 1 ELSE 0 END) as Finance,
-       SUM(CASE WHEN department = 'Sales' THEN 1 ELSE 0 END) as Sales,
-       SUM(CASE WHEN department = 'Marketing' THEN 1 ELSE 0 END) as Marketing
-    FROM employees;`
+```
+SELECT 
+    SUM(CASE WHEN department = 'HR' THEN 1 ELSE 0 END) as HR,
+    SUM(CASE WHEN department = 'IT' THEN 1 ELSE 0 END) as IT,
+    SUM(CASE WHEN department = 'Finance' THEN 1 ELSE 0 END) as Finance,
+    SUM(CASE WHEN department = 'Sales' THEN 1 ELSE 0 END) as Sales,
+    SUM(CASE WHEN department = 'Marketing' THEN 1 ELSE 0 END) as Marketing
+FROM employees;
+```
 
 ![alt text](<../Screenshot from 2024-03-17 21-49-22.png>)
 
@@ -48,7 +55,8 @@ You can also use ROLLUP to generate grand totals. If you ROLLUP all GROUP BY col
 Since PostgreSQL does not support WITH ROLLUP directly in the same way as MySQL or SQL Server, I have used GROUP BY and UNION ALL to manually add the grand total rows.In the code snippet given below 
 i have calculated the subtotals and grand total separately and then combined them into a single result set.
 
-`SELECT department, manager_id, SUM(salary) as total_salary
+```
+SELECT department, manager_id, SUM(salary) as total_salary
 FROM employees
 GROUP BY department, manager_id
 UNION ALL
@@ -58,7 +66,7 @@ GROUP BY department
 UNION ALL
 SELECT NULL, NULL, SUM(salary)
 FROM employees;
-`
+```
 ![alt text](<../Screenshot from 2024-03-18 01-00-57.png>)
 
 
@@ -66,8 +74,9 @@ CUBE is much like its cousin ROLLUP, except that it's not hierarchical. It gener
 
 #### **Demo for Cube**
 Query given below calculates the total salary for each combination of department and manager, as well as for each department, each manager, and a grand total for all departments and managers.
-`SELECT department, manager_id, SUM(salary) as total_salary
+```
+SELECT department, manager_id, SUM(salary) as total_salary
 FROM employees
 GROUP BY department, manager_id WITH ROLLUP;
-`
+```
 ![alt text](<../Screenshot from 2024-03-18 01-00-42.png>)
