@@ -12,7 +12,7 @@ Greeting everyone! Before we dive into todays disscussion let's recollect on The
 #### Demo
 SQL query given below ranks employees based on their scores, with the highest score receiving a rank of 1.
 
-``` Demonstration on Ranking
+```Demonstration on Ranking
  SELECT name, score, RANK() OVER (ORDER BY score DESC) as rank
 FROM scores; 
 ```
@@ -25,7 +25,7 @@ FROM scores;
 #### Demo
 Query given below display's each employee's name, their individual score, and the average score of their department. This is useful for understanding how each employee's score compares to the average score of their department.
 
-``` Demonstration on Windowing
+```Demonstration on Windowing
 SELECT name, score, AVG(score) OVER (PARTITION BY department) as avg_score
 FROM employees;
 ```
