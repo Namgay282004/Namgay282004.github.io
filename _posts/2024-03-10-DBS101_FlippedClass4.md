@@ -14,7 +14,7 @@ SQL query given below ranks employees based on their scores, with the highest sc
 
 ` SELECT name, score, RANK() OVER (ORDER BY score DESC) as rank
 FROM scores; `
-![alt text](<Screenshot from 2024-03-17 20-11-58.png>)
+![alt text](<Screenshot from 2024-03-17 18-28-15.png>)
 *If two or more rows have the same values, they will receive the same rank, and the next rank will be skipped. For example, if  Wangchuk and Yonten, both have a score of 96 and are tied for the first place, the next individual, Ranjung, will be ranked third, not second.*
 
 2.**Windowing**: A window function performs a calculation across a set of table rows that are somehow related to the current row. This is comparable to the type of calculation that can be done with an aggregate function. But unlike regular aggregate functions, use of a window function does not cause rows to become grouped into a single output row — the rows retain their separate identities. 
