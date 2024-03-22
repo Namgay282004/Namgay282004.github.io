@@ -70,8 +70,8 @@ When people use the term “NoSQL database”, they typically use it to refer to
 
     Time series data can be measured in seconds and minutes (like sensor-based devices), hourly (like phone usage), daily (petrol price), weekly (timesheets), monthly (electricity consumption), quarterly (performance reports), half-yearly (company growth), or annually (profits and revenue).
     
-    ![alt text](image-2.png) 
-
+    ![alt text](../Images_for_DBS101/image-2.png)
+    
 - ### Column oriented Databases
 
     Column-oriented databases are organized as a set of columns. When you want to run analytics on a small number of columns in the network, you can read those columns directly without consuming memory with unwanted data. A column-oriented database can aggregate the value of a given column (for example, adding up sales for the year).
