@@ -67,13 +67,13 @@ Normalization is a process of organizing the data in database to avoid data redu
     ![alt text](<../Images_for_DBS101/Screenshot from 2024-03-22 18-59-59.png>)
 
 
-### What we did during Flipped Class
+## What we did during Flipped Class
 
 We were initially divided into four groups, each consisting of six members. Each group was assigned a different topic within the realm of normal forms to study. My group, in particular, focused on the Third Normal Form (3NF). We spent the first 30 minutes discussing and sharing our thoughts within our group. Following this, all groups were tasked with presenting their findings to the class. Through this process, I personally gained a deeper understanding of all types of normal forms. I hope that my friends also benefited from this learning experience.
 
 
 
-                                   Thank you
+                                     Thank you
 
 
 
