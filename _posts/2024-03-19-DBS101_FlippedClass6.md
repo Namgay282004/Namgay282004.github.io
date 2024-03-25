@@ -7,7 +7,7 @@ tags: [DBS101]
 
 NoSQL databases are non-tabular databases and store data differently than relational tables. NoSQL databases come in a variety of types based on their data model. The main types are document, key-value, wide-column, and graph. They provide flexible schemas and scale easily with large amounts of data and high user loads.
 
-In this article, you'll learn what a NoSQL database is and different types of NoSQL Database.
+In this article, we will be looking into what a NoSQL database is and different types of NoSQL Database.
 
 ## What is NoSQL Database?
 
@@ -81,12 +81,17 @@ When people use the term “NoSQL database”, they typically use it to refer to
 
 ## Advantages, Disadvantages and Applications of NoSQL
 
-|  | Advantages | Disadvantages  | Applications  |
+| Database | Advantages | Disadvantages  | Applications  |
 | ----------- | ----------- | ----------- | ----------- |
-| Document stores | Simple & Powerful Data model, Scalable and No foreign Keys | Not Suitable for Relational Data, Querying Limited to Keys & Indexes, Map Reduce Required for More Significant Queries| E-commerce Platforms, Mobile App Backends, and Real-Time Analytics|
+| Document | Simple & Powerful Data model, Scalable and No foreign Keys | Not Suitable for Relational Data, Querying Limited to Keys & Indexes, Map Reduce Required for More Significant Queries| E-commerce Platforms, Mobile App Backends, and Real-Time Analytics|
 | Key-Value | Simplicity, Scalability and speed | No Relationships, Must Create Their Own Foreign Keys, Not Suitable for Complex Data, Lacks Scanning Capabilities| Web Applications and Real-Time Recommendations and Advertising|
 | Column Oriented | Supports semi-structured data, Naturally indexed and Scalable | Not suitable for relational data |Machine Learning and AI Workloads, Big Data Analytics |
 | Graph  | Extremely Powerful, Connected Data is Locally Indexed, Can Provide ACID | Difficult to Scale Out, Though Can Scale Up | Fraud Detection, Network and IT Operations, Master Data Management |
 | Vector | Efficient in Similarity Searches, Good at Handling High-Dimensional Data, Scalability, and Real-Time Analytics | Data Type Limitations, Limited Only for Simple Similarity Searches | Image and Facial Recognition, Natural Language Processing (NLP)|
 | Time-Series | Efficient in Storage and Querying, Good for Analytics and Management Related to Time-Series, Free to Use | Complex to Set Up, Requires More Space to Accommodate Large Data, Less Flexibility | Weather Forecasting, Annual Income, and Temperature Detection
 |
+
+
+## Summary
+
+NoSQL databases are a class of non-relational database management systems designed for handling large volumes of data with high performance, scalability, and flexibility. They come in various types, including document-based databases (like MongoDB and CouchDB) that store data in a semi-structured format, key-value database (such as Redis and DynamoDB) optimized for scalability and caching, column-oriented database (Cassandra and HBase) for handling large datasets with high performance, graph databases (Neo4j and Amazon Neptune) for managing complex relationships between entities, and search engines (Elasticsearch and Solr) optimized for search operations.
