@@ -1,6 +1,6 @@
 ---
-Title: DBS101 Flipped Class5
-categories: [DBS101, Flipped_Class5]
+Title: DBS101 Flipped Class6
+categories: [DBS101, Flipped_Class6]
 tags: [DBS101]
 ---
 ## Topic: Nonrelationsal Database(NoSQL)

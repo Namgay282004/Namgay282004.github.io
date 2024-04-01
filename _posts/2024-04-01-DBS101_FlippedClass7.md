@@ -1,6 +1,6 @@
 ---
-Title: DBS101 Flipped Class6
-categories: [DBS101, Flipped_Class6]
+Title: DBS101 Flipped Class7
+categories: [DBS101, Flipped_Class7]
 tags: [DBS101]
 ---
 ## Topic: Creating a database from scratch
@@ -8,6 +8,7 @@ tags: [DBS101]
 A database is an organized collection of structured data that is stored and can be accessed. It is made so that large amounts of data can be retrieved,inserted, or deleted.
 
 ### Main components of database
+
 The main components of a database are:
 - **Tables**: A table is a collection of related data organized into rows and columns.Tables are used to store data in a relational database.
 - **Fields**: Fields are the individual pieces of data within a table. Each field contains a specific data type, such as a text string, numeric value, or date.
