@@ -18,6 +18,7 @@ It is a technique used in database management systems (DBMS) to improve the perf
 ![alt text](../Images_for_DBS101/bit.png)
 
 #### Features of Bitmap Indexing in DBMS
+
 1. **Space efficiency**: Bitmap indexes use a compact binary format to store data occurrences, saving space, ideal for large datasets with many attributes.
 
 2. **Fast query processing**: It uses set-based operations like AND, OR, and NOT for speedy processing, reducing the need for full scans.
