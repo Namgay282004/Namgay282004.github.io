@@ -11,7 +11,7 @@ Hello to all my wonderful readers! I trust you're all doing splendidly. Today, w
 
 Now, with smiles on our faces, let's explore the complicated parts of databases and figure out the mysteries together.
 
-### Bitmap Indexing in DBMS.
+### Bitmap Indexing in DBMS
 
 It is a technique used in database management systems (DBMS) to improve the performance of read-only queries that involve large datasets with many attributes (columns).
 
