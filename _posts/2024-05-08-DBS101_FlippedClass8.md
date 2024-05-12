@@ -32,7 +32,7 @@ It is a technique used in database management systems (DBMS) to improve the perf
 - Efficient range queries
 - Space efficiency
 - Multi-dimensional indexing
--[Data warehousing applications](https://www.geeksforgeeks.org/data-warehousing/).
+- [Data warehousing applications](https://www.geeksforgeeks.org/data-warehousing/).
 
 **Bitmap indexing** excels in efficiently querying large datasets with numerous attributes, making it a preferred option for data warehousing and applications prioritizing rapid query processing.
 
