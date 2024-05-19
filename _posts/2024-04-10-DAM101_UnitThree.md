@@ -3,7 +3,7 @@ Title: DAM101 UnitThree
 categories: [DAM101, UnitThree]
 tags: [DAM101]
 ---
-## Topic : Introduction to Convolution Neural Network
+## Topic : Convolution Neural Network
 
 A Convolutional Neural Network (CNN) is a type of deep learning neural network that is well-suited for image and video analysis. CNNs use a series of convolution and pooling layers to extract features from images and videos, and then use these features to classify or detect objects or scenes.
 
