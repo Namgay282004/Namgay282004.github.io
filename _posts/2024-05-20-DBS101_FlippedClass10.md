@@ -3,7 +3,7 @@ Title: DBS101 Flipped Class10
 categories: [DBS101, Flipped_Class10]
 tags: [DBS101]
 ---
-## Topic: Transactions
+## Transactions
 
 Hey everyone! Today, we're diving into the essential topic of transactions in databases. We'll uncover how transactions keep your data reliable and consistent through their ACID properties. Plus, we'll explore serializability, which ensures that multiple transactions can run concurrently without causing chaos. So, get ready, because we're about to make the complex world of database transactions easy to understand!
 
