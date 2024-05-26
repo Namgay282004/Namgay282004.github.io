@@ -229,4 +229,54 @@ Testing serializability in DBMS is important for maintaining the accuracy and st
 
 Transactions in DBMS ensure reliable and consistent database operations through their ACID properties: **Atomicity, Consistency, Isolation,** and **Durability**. Serializability ensures that concurrent transactions do not interfere with each other and maintain database consistency, allowing for correct execution as if transactions were performed serially. These principles are vital for maintaining data integrity and stability in database systems.
 
+### Flipped Class Recap: Understanding Transactions and ACID Properties
+
+During the Flipped Class session, we delved into transactions and their ACID properties through practical SQL exercises. Let's recap what we covered:
+
+1. **Database Initialization**:
+
+    - Created a new database named `test_transaction`.
+    - Set up an `accounts` table with columns for `account_name` and `balance`.
+    - Inserted initial records for accounts 'A' with a balance of 1000 and 'B' with a balance of 2000.
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 13-51-03.png>)
+
+2. Transaction for Balance Transfer:
+
+    - Transferred 500 from account 'A' to account 'B' within a transaction.
+    - Displayed the `accounts` table before and after the transaction
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 13-53-11.png>)
+
+3. Updating Account Balance:
+
+    - Started a transaction and updated the balance of account 'A', subtracting 100.
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 14-09-06.png>)
+
+4. Inserting and Committing Data:
+
+    - Began a transaction, inserted a new record for account 'B' with a balance of 500, and committed the transaction.
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 14-10-41.png>)
+
+5. Handling Transaction Errors:
+
+    - Attempted to update the balance of a non-existent account 'D', then rolled back the transaction.
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 14-11-19.png>)
+
+    - Tried to insert a new record for account 'E' with a balance of 700, but rolled back the transaction due to an error
+
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 14-12-25.png>)
+
+6. Successful Transaction:
+
+    - Initiated a transaction, inserted a new record for account 'F' with a balance of 1000, and committed the transaction.
+
+        ![alt text](<../Images_for_DBS101/Screenshot from 2024-05-20 14-15-57.png>)
+
+Through this session we learned how transactions keep data safe and accurate in databases. They ensure that if something goes wrong, like a power outage, the data remains reliable. Transactions are like safety measures for data integrity.
+
 <p style="text-align: center;">THANK YOU:)</p>
