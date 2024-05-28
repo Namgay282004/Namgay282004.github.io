@@ -87,8 +87,6 @@ The protocol uses these timestamps to decide whether a transaction's request to 
 
 Locks are synchronization mechanisms used in concurrency control within a Database Management System (DBMS). They manage access to shared data items, ensuring data consistency during concurrent transactions.
 
- ![alt text](../Images_for_DBS101/Locks-1.webp)
-
 Locks allow transactions to acquire read or write access to data, preventing conflicts and enforcing isolation. They come in different types, each serving a specific purpose:
 
 - **Shared Locks (S-Locks)**: Allow multiple transactions to read a data item concurrently but prevent any transaction from writing to it.
@@ -100,8 +98,6 @@ Locks are essential for maintaining database integrity by ensuring that transact
 ### What Are Latches?
 
 Latches are synchronization mechanisms used to control concurrent access and ensure data consistency in a DBMS. They are commonly employed to protect shared resources, such as data structures or buffers, from concurrent access by multiple transactions or threads.
-
-![alt text](../Images_for_DBS101/Latches-2.webp)
 
 Latches are designed for rapid acquisition and release, often within a single CPU cycle, making them highly effective for protecting frequently accessed data structures. They operate in two modes:
 
