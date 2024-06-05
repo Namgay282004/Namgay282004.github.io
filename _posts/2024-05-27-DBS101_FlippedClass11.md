@@ -107,7 +107,7 @@ Latches are designed for rapid acquisition and release, often within a single CP
 
 Latches are crucial for ensuring that data structures within a DBMS remain consistent and are not corrupted by concurrent operations.
 
-### 5. Differences Between Locks and Latches
+### Differences Between Locks and Latches
 
 
 | Characteristic | Locks	 | Latches |
