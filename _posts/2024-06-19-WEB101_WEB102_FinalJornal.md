@@ -1,6 +1,6 @@
 ---
-Title:  WEB FinalJornal
-categories: [WEB101, WEB102 FinalJornal]
+Title:  WEB FinalJournal
+categories: [WEB101, WEB102 FinalJournal]
 tags: [WEB101, WEB102]
 ---
 # Final Practical Assignment Report: Instagram Clone Chat Application
