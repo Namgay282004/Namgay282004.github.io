@@ -3,34 +3,126 @@ Title:  WEB FinalJournal
 categories: [WEB101, WEB102 FinalJournal]
 tags: [WEB101, WEB102]
 ---
-# Final Practical Assignment Report: Instagram Clone Chat Application
 
-## Introduction
+# Final Project [Instagram clone]
 
-This report describes my experience developing the chat feature for an Instagram clone as part of a full-stack web application project. I focused on the frontend, working on the user interface and basic message-sending functionality. Despite facing several challenges, I learned a lot throughout the process.
+We document the process of cloning Instagram, focusing on both backend and frontend development. This includes setting up a database, developing the backend with Prisma and Hono, and building the frontend with a modern JavaScript framework.
 
-## Development Process
-### Front-End Development
-To begin, I set up the frontend environment using React. I chose Create React App because it simplifies the setup process. I installed libraries like React Router for navigation and Chakra UI for styling. Chakra UI was especially useful for creating a consistent and attractive design.
+## Table of Contents
+1. [Developing the Frontend](#developing-the-frontend)
+2. [Setting Up the Backend](#setting-up-the-backend)
+3. [Integrating Frontend and Backend](#integrating-frontend-and-backend)
+4. [Challenges and Solutions](#challenges-and-solutions)
+5. [Conclusion](#conclusion)
 
-I built key components: **ChatList** for displaying recent chats, **ChatWindow** for showing messages in a selected chat, and **MessageInput** for sending new messages. Chakra UI helped ensure these components looked good and worked well together. I managed state using React's useState and useEffect hooks to handle updates and changes efficiently.
+## Developing the Frontend
 
-### Basic Functionality Implementation
-I implemented basic functionality that allows users to send text messages. Unfortunately, I couldn't include voice messages due to time constraints. Handling message sending involved updating the chat window dynamically whenever a new message was sent.
+### Designing of UI
 
-## Challenges Faced
-### WebSocket Integration
-One major challenge was integrating WebSocket for real-time messaging. We struggled with issues like messages not being delivered in real-time, inconsistent connection states, and difficulties managing multiple user connections. Messages were often delayed, out of order, or missing. To address this, we needed better error handling for connection drops, a connection manager for handling multiple WebSocket connections, and tools like Postman and debugging logs to identify and fix issues.
+In the process of designing our frontend, we structured the basic UI components that are necessary for displaying a simple instagram page.
+
+![alt text](../Images_for_WEB101/instagraam.jpeg)
+
+### Implementing the UI
+
+We implemented the UI components using React, a popular JavaScript library for building user interfaces. We used React components to create reusable UI elements such as buttons, input fields, and cards. Aside from these basic components, we also implemented more complex components such as the feed, profile, and post components. These components were designed to display data fetched from the backend. We used the Axios library to make HTTP requests to the backend API.
+
+The main css library that we used was Chakra UI, which is a component library for React that provides a set of accessible and customizable components. We used Chakra UI to style our components and create a consistent design across the application.
+
+We used chakra ui because it is a simple and easy to use css library that provides a set of accessible and customizable components. 
+
+### Styling the UI
+
+We used Chakra UI to style our components and create a consistent design across the application. Chakra UI provides a set of accessible and customizable components that can be easily styled using props. We used the Box, Flex, and Text components to create layouts and style text. We also used the Button component to create buttons and the Input component to create input fields. Chakra UI also provides a ThemeProvider component that allows us to define a custom theme for our application.
+
+### Implementing User Authentication
+
+For authentication we built a simple signup and login form. We used the useState hook to manage the form state and the useEffect hook to make API requests to the backend. We used the useHistory hook to redirect the user to the feed page after successful login. We also used the useContext hook to manage the user state and provide authentication context to other components.
+
+![alt text](../Images_for_WEB101/insta.jpeg)
+
+### Implementing User Profile
+
+We implemented the user profile page using the useParams hook to get the user id from the URL. We used the useEffect hook to fetch user data from the backend and display it on the profile page. We also implemented the follow and unfollow functionality using the useState hook to manage the follow state and the useEffect hook to make API requests to the backend.
+
+### Implementing Feed
+
+We are going to implement the feed page using the useEffect hook to fetch posts from the backend and display them in a list. We used the useState hook to manage the post state and the useEffect hook to make API requests to the backend. We also implemented the like and comment functionality using the useState hook to manage the like and comment state and the useEffect hook to make API requests to the backend.
+
+### Implementing Post
+
+We are going to implement the post page using the useParams hook to get the post id from the URL. We used the useEffect hook to fetch post data from the backend and display it on the post page. We also implemented the like and comment functionality using the useState hook to manage the like and comment state and the useEffect hook to make API requests to the backend.
+
+### Implementing Search
+
+We are going to implement the search page using the useState hook to manage the search query and the useEffect hook to fetch search results from the backend. We used the useState hook to manage the search results state and the useEffect hook to make API requests to the backend.
+
+## Setting Up the Backend
+
+### Setting Up the database
+
+Schema design
+![alt text](../Images_for_WEB101/database].png)
+We used Prisma to set up the database for our Instagram clone. Prisma is an open-source database toolkit that makes it easy to work with databases in a type-safe and efficient way. We used Prisma to also define the data model for our application and generate the database schema. We also used Prisma Migrate to manage database migrations and Prisma Client to interact with the database.
+
+### Choosing a database schema
+
+We chose sqlite database schema because it is easy to use and provides a lot of features that are necessary for our application. We defined the data model for our application using Prisma and generated the database schema. We used Prisma Migrate to manage database migrations and Prisma Client to interact with the database.
+
+## Integrating Frontend and Backend
+
+### Making HTTP requests
+
+We used Axios to make HTTP requests from the frontend to the backend API. We used Axios to make GET, POST, PUT, and DELETE requests to the backend API. We also used Axios interceptors to add authentication headers to requests and handle errors.
+
+### Handling authentication
+
+We implemented user authentication using JWT tokens. 
+
+### Handling authorization
+
+We implemented user authorization also using JWT tokens.
+
+## Challenges and Solutions
+
+### Challenge 1: Implementing User Authentication
+
+One of the challenges we faced was implementing user authentication. We had to figure out how to securely store user credentials and authenticate users. We solved this challenge by using JWT tokens to authenticate users. Since our database was set up with sqlite, it was easy to store user credentials securely. For opting a secure application, we used bcrypt to hash user passwords before storing them in the database.
+
+### Challenge 2: Implementing User Profile
+
+We had to figure out how to fetch user data from the backend and display it on the profile page. We solved this challenge by using the useParams hook to get the user id from the URL and the useEffect hook to fetch user data from the backend. It is yet to complete the follow and unfollow functionality.
+
+### Challenge 3: Implementing Feed
+
+We had to figure out how to fetch posts from the backend and display them in a list. We needed to use pagination to fetch posts in batches. We solved this challenge by using the useEffect hook to fetch posts from the backend and display them in a list. We also implemented the like and comment functionality using the useState hook to manage the like and comment state and the useEffect hook to make API requests to the backend. 
+
+### Challenge 4: Implementing Post
+
+We had to figure out how to fetch post data from the backend and display it on the post page. We solved this challenge by using the useParams hook to get the post id from the URL and the useEffect hook to fetch post data from the backend. We also implemented the like and comment functionality using the useState hook to manage the like and comment state and the useEffect hook to make API requests to the backend.
+
+Uploading images was a challenge that we faced. Preview of the image was not working properly. 
+
+### Challenge 5: Implementing Search
+
+We had to figure out how to fetch search results from the backend and display them on the search page. We solved this challenge by using the useState hook to manage the search query and the useEffect hook to fetch search results from the backend. We used the useState hook to manage the search results state and the useEffect hook to make API requests to the backend.
 
 
-### Voice Message Implementation
-I referred to the React Recorder documentation to implement voice messaging. I managed to get the voice recording feature working, allowing users to record and stop recordings. Additionally, I was able to send voice messages. However, I encountered an issue where previously sent voice messages couldn't be played back. This was a main issue, as the functionality to listen to voice messages is crucial for a chat application.
+### Challenge 6: Uploading audio using web sockets
 
-## Back-End Development
-Although we focused mainly on the frontend, we also began setting up the backend using Hono, Socket.IO, and SQLite. We created a simple Hono server connected to a SQLite database, using raw SQL queries for database interaction and Socket.IO for real-time communication. The backend aimed to provide secure authentication and efficient real-time communication.
+We referred to the React Recorder documentation to implement voice messaging. We managed to get the voice recording feature working, allowing users to record and stop recordings. Additionally, We were able to send voice messages. However, We encountered an issue where previously sent voice messages couldn't be played back. This was a main issue, as the functionality to listen to voice messages is crucial for a chat application.
 
-## Lessons  I Learned 
-During the project to create a chat feature for an Instagram clone, I focused on building the part of the app that users see and interact with (frontend) using React and Chakra UI. I learned how to manage messages and display them in real-time, which was challenging because messages sometimes arrived late or didn't show up right away. I also tried adding voice messages, but getting them to work reliably across different browsers was tricky. On the backend (the part of the app users don't see), I started setting up a system to store messages using SQLite and manage real-time updates using Socket.IO. This project taught me that building web apps involves lots of planning, learning, and testing to solve problems and create a smooth experience for users.
+## What I learned
+
+Over the past 10 days, our team worked on a project to create a full-stack web application, specifically cloning Instagram. I focused on developing the UI part of the messaging feature, which needed knowledge of WebSockets. At first, I wasn't very confident with WebSockets, so I read a lot of documentation and watched YouTube videos to learn more.
+
+This project helped me understand WebSockets much better, even though we faced challenges in getting them to work correctly. Unfortunately, We couldn't fully implement WebSockets in our project.
+
+Despite this, I gained valuable insights into how WebSockets work and how to integrate them into the UI. This experience has motivated me to keep learning and improve my skills in WebSockets and full-stack development in the future.
+
+## Conclusion
+
+We tried implementing the basic functionality of Instagram such as user authentication, user profile, feed, post, and search. We have faced several challenges along the way but have managed to overcome some of them. We are still working on some features such as audio recording and uploading. We have learned a lot from this project and have gained valuable experience in web development. We are proud of what we have accomplished and look forward to further improving our Instagram clone.
 
 ## References
 
